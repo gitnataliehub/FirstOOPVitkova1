@@ -1,10 +1,16 @@
-public static class Client {
-    private String name;
-    private int id;
-    private long phone;
-    private long numberCard;
+public static class Client {// клас публічний, щоб до нього був всебічний доступ
+    private String name;//змінна приватна, щоб зміни були застосовувані тільки тими, хто має доступ до цього класу
+    //ім'я клієнта
+    private int id;//змінна приватна, щоб зміни були застосовувані тільки тими, хто має доступ до цього класу
+    //унікальний код клієнта
+    private long phone;//змінна приватна, щоб зміни були застосовувані тільки тими, хто має доступ до цього класу
+    //телефон
+    private long numberCard;//змінна приватна, щоб зміни були застосовувані тільки тими, хто має доступ до цього класу
+    // платіжна картка
 
-    public Client(String name, int id, long phone, long numberCard) { //конструктор класу Клієнт
+    private Client(String name, int id, long phone, long numberCard) { //приватний конструктор,
+        // щоб мати змогу контролювати процес створення об'єктів
+        //конструктор класу Клієнт
         this.name = name;
         this.id = id;
         this.phone = phone;
@@ -12,7 +18,8 @@ public static class Client {
     }
 }
 
-public static long getContact(long phone) {
+public static long getContact(long phone) {//доступ до телефона відкритий для інших
+    //отримує контактну інформацію, телефон
     return phone;
 }
 
